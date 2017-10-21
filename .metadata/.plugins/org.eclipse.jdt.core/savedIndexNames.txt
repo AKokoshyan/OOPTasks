@@ -1,0 +1,2 @@
+INDEX VERSION 1.130+C:\OOPTasks\.metadata\.plugins\org.eclipse.jdt.core
+2862190734.index

@@ -1,0 +1,55 @@
+package com.generator;
+
+import java.util.Random;
+
+import com.vignett.BusVignett;
+import com.vignett.CarVignett;
+import com.vignett.TruckVignett;
+import com.vignett.Vignett;
+import com.vignettTaskExeptions.InvalidVignettException;
+
+public class Generator {
+
+	public static Vignett gnerateRandomVignetts() throws InvalidVignettException {
+		Vignett temp = null;
+
+		int generator = new Random().nextInt(3) + 1;
+
+		switch (generator) {
+		case 1:
+			temp = new CarVignett(typeGenerator());
+			break;
+		case 2:
+			temp = new TruckVignett(typeGenerator());
+			break;
+		case 3:
+			temp = new BusVignett(typeGenerator());
+			break;
+		default:
+			System.out.println("Something went wrong !");
+			break;
+		}
+		return temp;
+	}
+
+	private static String typeGenerator() {
+		String type = "";
+		int generator = new Random().nextInt(3) + 1;
+
+		switch (generator) {
+		case 1:
+			type = "yearly";
+			break;
+		case 2:
+			type = "monthly";
+			break;
+		case 3:
+			type = "dayly";
+			break;
+		default:
+			System.out.println("Something went wrong!");
+			break;
+		}
+		return type;
+	}
+}
