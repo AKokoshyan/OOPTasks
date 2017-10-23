@@ -1,0 +1,53 @@
+package com.tankStation;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+import com.generator.Generator;
+import com.vignett.Vignett;
+import com.vignettTaskExeptions.InvalidTankstationException;
+import com.vignettTaskExeptions.InvalidVignettException;
+
+public class Tankstation {
+
+	private double profit;
+	private List<Vignett> vignettesForSale;
+
+	public Tankstation(double profit) throws InvalidTankstationException, InvalidVignettException {
+		setProfit(profit);
+		setVignettesForSale();
+	}
+
+	private void setVignettesForSale() throws InvalidVignettException {
+		vignettesForSale = new ArrayList<Vignett>();
+		for (int i = 0; i < 10000; i++) {
+			vignettesForSale.add(new Generator().gnerateRandomVignetts());
+		}
+		Comparator<Vignett> c = new Comparator<Vignett>() {
+
+			public int compare(Vignett o1, Vignett o2) {
+
+				return (int) (o1.getPrice() - o2.getPrice());
+			}
+		};
+		vignettesForSale.sort(c);
+
+	}
+
+	public void getVignettes() {
+		int count = 1;
+		for (Vignett vignett : vignettesForSale) {
+			System.out.println(count + " " + vignett);
+			count++;
+		}
+	}
+
+	private void setProfit(double profit) throws InvalidTankstationException {
+		if (profit > 0) {
+			this.profit = profit;
+		} else {
+			throw new InvalidTankstationException();
+		}
+	}
+}

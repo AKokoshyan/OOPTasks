@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import com.driver.Driver;
+import com.generator.Generator;
+import com.tankStation.Tankstation;
+import com.vehicles.Vehicle;
+import com.vignettTaskExeptions.InvalidDriverDataException;
+import com.vignettTaskExeptions.InvalidTankstationException;
+import com.vignettTaskExeptions.InvalidVehicleException;
+import com.vignettTaskExeptions.InvalidVignettException;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		try {
+			Tankstation tankStation = new Tankstation(20000.0);
+
+			List<Driver> driverList = new ArrayList<>();
+
+			for (int i = 0; i < 20; i++) {
+				Driver tempDriver = new Driver(Generator.generateRandomDriverName(),
+						Generator.generateRandomDriverMoney(), tankStation);
+				driverList.add(tempDriver);
+
+			}
+			for (Iterator iterator = driverList.iterator(); iterator.hasNext();) {
+				Driver driver = (Driver) iterator.next();
+				System.out.println(driver);
+			}
+
+			List<Vehicle> listOfVehicles = new ArrayList<>();
+
+			for (int i = 0; i < 200; i++) {
+				listOfVehicles.add(Generator.generateRandomVehicle());
+			}
+
+		} catch (InvalidVignettException e) {
+			e.getMessage();
+		} catch (InvalidTankstationException e) {
+			e.getMessage();
+		} catch (InvalidDriverDataException e) {
+			e.getMessage();
+		} catch (InvalidVehicleException e) {
+			e.getMessage();
+		}
+	}
+}

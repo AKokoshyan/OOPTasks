@@ -1,6 +1,7 @@
 package com.driver;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.tankStation.Tankstation;
@@ -51,6 +52,13 @@ public class Driver {
 			this.vehicles.add(vehicle);
 		}
 	}
+	
+	public void getDriverVehicles() {
+		for (Iterator iterator = vehicles.iterator(); iterator.hasNext();) {
+			Vehicle vehicle = (Vehicle) iterator.next();
+			System.out.println(vehicle);
+		} 
+	}
 
 	public void byeVignettForAllVehicles() {
 		
@@ -58,6 +66,12 @@ public class Driver {
 	
 	public void byeVignettForOneVehicle() {
 		
+	}
+	
+	@Override
+	public String toString() {
+		String result = this.name + " " + this.money;
+		return result;
 	}
 
 }

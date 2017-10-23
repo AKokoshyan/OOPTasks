@@ -1,0 +1,30 @@
+package com.vehicles;
+
+import com.vignett.CarVignett;
+import com.vignett.Vignett;
+import com.vignettTaskExeptions.InvalidVehicleException;
+
+public class Bus extends Vehicle{
+
+	private Vignett vignett;
+	
+	public Bus(String model, int yearManufacture) throws InvalidVehicleException {
+		super(model, yearManufacture);
+		super.hasVignett = false;
+	}
+
+	@Override
+	private void hasVignett(boolean hasVignett) {
+		super.hasVignett = hasVignett;			
+	}
+	
+	public void setVignett(Vignett vignett) {
+		if(vignett instanceof CarVignett && vignett!=null) {
+			this.vignett = vignett;
+			hasVignett(true);;
+		}else {
+			
+		}
+	}
+
+}

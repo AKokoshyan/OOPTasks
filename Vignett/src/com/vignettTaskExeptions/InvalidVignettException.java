@@ -7,7 +7,7 @@ public class InvalidVignettException extends Exception {
 	}
 
 	public String getMessage() {
-		String text = "The data which you entered is invalid!";
+		String text = "The data which you entered for vignett is invalid!";
 		return text;
 	}
 }

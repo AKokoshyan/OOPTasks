@@ -1,0 +1,17 @@
+import com.tankStation.Tankstation;
+import com.vignettTaskExeptions.InvalidTankstationException;
+import com.vignettTaskExeptions.InvalidVignettException;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		try {
+		Tankstation tankStation = new Tankstation(20000.0);
+
+		} catch (InvalidVignettException e) {
+			e.getMessage();
+		}catch (InvalidTankstationException e) {
+			e.getMessage();
+		}
+	}
+}

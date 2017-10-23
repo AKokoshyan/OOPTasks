@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;x&apos; in &apos;com.generator.Generator.gnerateRandomVignetts()&apos; to &apos;randomNumber&apos;&#x0D;&#x0A;- Original project: &apos;Vignett&apos;&#x0D;&#x0A;- Original element: &apos;com.generator.Generator.gnerateRandomVignetts().x&apos;&#x0D;&#x0A;- Renamed element: &apos;x&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;x&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.generator{Generator.java[Generator~gnerateRandomVignetts@x!665!697!669!669!I!0!false" name="randomNumber" references="true" stamp="1508758754437" version="1.0"/>
+</session>
