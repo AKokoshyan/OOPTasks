@@ -42,24 +42,21 @@ public class MyStack {
 		} else {
 			this.myStack[++top] = num;
 		}
-		System.out.println(this.top);
 	}
 
 	public int pop() throws StackException {
-		if (this.top!=-1) {
-			System.out.println(this.top);
+		if (this.top != -1) {
 			return myStack[top--];
 		} else {
 			throw new StackException();
 		}
-		
 
 	}
 
 	public int peak() throws StackException {
-		if(top!=-1) {
-			return myStack[top];			
-		}else {
+		if (top != -1) {
+			return myStack[top];
+		} else {
 			throw new StackException();
 		}
 	}
