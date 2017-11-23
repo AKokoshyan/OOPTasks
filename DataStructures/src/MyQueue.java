@@ -2,12 +2,12 @@ import com.exceptions.MyQueueException;
 
 public class MyQueue {
 
-	int[] muQueue;
-	int length;
-	int front;
-	int rear;
-	boolean isEmpty;
-	boolean isTurnedCicle;
+	private int[] muQueue;
+	private int length;
+	private int front;
+	private int rear;
+	private boolean isEmpty;
+	private boolean isTurnedCicle;
 
 	public MyQueue(int length) throws MyQueueException {
 		setLenth(length);
