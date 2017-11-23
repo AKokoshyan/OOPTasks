@@ -52,22 +52,22 @@ public class Driver {
 			this.vehicles.add(vehicle);
 		}
 	}
-	
+
 	public void getDriverVehicles() {
 		for (Iterator iterator = vehicles.iterator(); iterator.hasNext();) {
 			Vehicle vehicle = (Vehicle) iterator.next();
 			System.out.println(vehicle);
-		} 
+		}
 	}
 
 	public void byeVignettForAllVehicles() {
-		
+
 	}
-	
+
 	public void byeVignettForOneVehicle() {
-		
+
 	}
-	
+
 	@Override
 	public String toString() {
 		String result = this.name + " " + this.money;

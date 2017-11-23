@@ -1,7 +1,0 @@
-package com.vehicles;
-
-public abstract class Vehicle {
-	private String model;
-	private boolean hasVignett;
-	private int yearManufacture;
-}

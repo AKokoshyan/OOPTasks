@@ -3,9 +3,12 @@
 <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicTreeUI.TreeHomeAction"/>
 <fullyQualifiedTypeName name="com.tankStation.Tankstation"/>
 <fullyQualifiedTypeName name="com.vignettTaskExeptions.InvalidTankstationException"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.driver.Driver"/>
 <fullyQualifiedTypeName name="com.generator.Generator"/>
 <fullyQualifiedTypeName name="com.vignettTaskExeptions.InvalidDriverDataException"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

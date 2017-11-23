@@ -1,5 +1,0 @@
-package com.vignettTaskExeptions;
-
-public class InvalidVehicleException extends Exception {
-
-}

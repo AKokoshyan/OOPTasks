@@ -1,5 +1,0 @@
-package com.vehicles;
-
-public class Bus extends Vehicle{
-
-}
